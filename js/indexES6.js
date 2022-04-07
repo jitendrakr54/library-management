@@ -1,8 +1,4 @@
 console.log("Library management using ES6");
-document.onload = function() {
-    let display = new Display();
-    display.showBooks();
-};
 
 class Book {
     constructor(name, author, type) {
@@ -117,3 +113,10 @@ function submitLibraryForm(e) {
         display.showMessage('danger', 'This book can not be added!');
     }
 }
+
+function load() {
+    let display = new Display();
+    display.showBooks();
+}
+
+document.onload = load();
